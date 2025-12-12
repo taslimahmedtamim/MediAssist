@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediAssist+ | Smart Healthcare Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="landing-page" id="landingPage">
+        <nav class="landing-nav">
+            <div class="landing-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediAssist+</span>
+            </div>
+            <div class="landing-nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+                <button class="theme-toggle-landing" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+                    <i class="fas fa-moon" id="landingThemeIcon"></i>
+                </button>
+                <button class="btn btn-outline" onclick="showLandingAuth('login')">Login</button>
+                <button class="btn btn-primary" onclick="showLandingAuth('register')">Get Started</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Your Smart <span class="gradient-text">Healthcare</span> Companion</h1>
+                <p>Never miss a medication, understand your lab reports instantly, and get personalized diet plans for better health management.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="showLandingAuth('register')">
+                        <i class="fas fa-rocket"></i> Get Started Free
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="scrollToSection('features')">
+                        <i class="fas fa-play-circle"></i> Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">100%</span>
+                        <span class="hero-stat-label">Free to Use</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">4</span>
+                        <span class="hero-stat-label">Key Features</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">24/7</span>
+                        <span class="hero-stat-label">Health Tracking</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-mockup">
+                    <div class="mockup-card">
+                        <i class="fas fa-pills"></i>
+                        <span>Take Aspirin 100mg</span>
+                        <small>8:00 AM - After breakfast</small>
+                    </div>
+                    <div class="mockup-card success">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Medication Taken!</span>
+                        <small>Keep up the great work</small>
+                    </div>
+                    <div class="mockup-card alert">
+                        <i class="fas fa-file-medical"></i>
+                        <span>Lab Report Analyzed</span>
+                        <small>2 parameters need attention</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="section-header">
+                <h2>Powerful Features for Your Health</h2>
+                <p>Everything you need to manage your medications, understand your health reports, and maintain a healthy diet.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Smart Medicine Reminders</h3>
+                    <p>Never miss a dose with intelligent scheduling. Set multiple reminders with meal-based instructions.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Multiple daily schedules</li>
+                        <li><i class="fas fa-check"></i> Meal-relation tracking</li>
+                        <li><i class="fas fa-check"></i> Course duration management</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Pill Tracker Dashboard</h3>
+                    <p>Visualize your medication adherence with intuitive charts and maintain your health streaks.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Daily progress tracking</li>
+                        <li><i class="fas fa-check"></i> Monthly calendar view</li>
+                        <li><i class="fas fa-check"></i> Streak achievements</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Lab Report Analyzer</h3>
+                    <p>Upload your lab reports and get instant AI-powered analysis with abnormality detection.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> OCR text extraction</li>
+                        <li><i class="fas fa-check"></i> Automatic parameter detection</li>
+                        <li><i class="fas fa-check"></i> Reference range comparison</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Diet & Nutrition Planner</h3>
+                    <p>Get personalized diet recommendations based on your health conditions.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Condition-specific plans</li>
+                        <li><i class="fas fa-check"></i> Macro tracking</li>
+                        <li><i class="fas fa-check"></i> Restricted foods alerts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Get started in 3 simple steps</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Account</h3>
+                    <p>Sign up for free and set up your health profile with your basic information.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Add Your Medications</h3>
+                    <p>Enter your medications with dosage, schedule, and special instructions.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Track & Improve</h3>
+                    <p>Follow reminders, upload reports, and maintain a healthy lifestyle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conditions Section -->
+        <section class="conditions-section" id="about">
+            <div class="section-header">
+                <h2>Designed for Managing</h2>
+                <p>Personalized support for various health conditions</p>
+            </div>
+            <div class="conditions-grid">
+                <div class="condition-badge">
+                    <i class="fas fa-tint"></i>
+                    <span>Diabetes</span>
+                </div>
+                <div class="condition-badge">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Hypertension</span>
+                </div>
+                <div class="condition-badge">
+                    <i class="fas fa-kidneys"></i>
+                    <span>Kidney Disease</span>
+                </div>
+                <div class="condition-badge">
+                    <i class="fas fa-weight"></i>
+                    <span>Obesity</span>
+                </div>
+                <div class="condition-badge">
+                    <i class="fas fa-bone"></i>
+                    <span>Thyroid</span>
+                </div>
+                <div class="condition-badge">
+                    <i class="fas fa-liver"></i>
+                    <span>Liver Health</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Start Your Health Journey Today</h2>
+                <p>Join MediAssist+ and take control of your health with smart tools designed for you.</p>
+                <button class="btn btn-primary btn-lg" onclick="showLandingAuth('register')">
+                    <i class="fas fa-user-plus"></i> Create Free Account
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>MediAssist+</span>
+                </div>
+                <p>Your trusted healthcare companion for medication management, lab report analysis, and personalized nutrition planning.</p>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#about">About</a>
+                </div>
+                <p class="copyright">&copy; 2025 MediAssist+. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login/Register Modal (Outside containers so it's always accessible) -->
+    <div class="modal" id="authModal">
+        <div class="modal-content auth-modal">
+            <button class="modal-close" onclick="hideAuthModal()">&times;</button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="regName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="regPassword" class="form-input" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-panel-header">
+            <h3><i class="fas fa-bell"></i> Notifications</h3>
+            <button class="btn btn-sm" onclick="closeNotificationPanel()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="notification-panel-body" id="notificationList">
+            <div class="no-data">No notifications</div>
+        </div>
+        <div class="notification-panel-footer">
+            <button class="btn btn-sm btn-primary" onclick="enableBrowserNotifications()">
+                <i class="fas fa-bell"></i> Enable Notifications
+            </button>
+            <button class="btn btn-sm btn-outline" onclick="sendTestNotification()">
+                <i class="fas fa-paper-plane"></i> Test
+            </button>
+        </div>
+    </div>
+
+    <!-- Drug Interaction Warning Modal -->
+    <div class="modal" id="interactionModal">
+        <div class="modal-content">
+            <div class="modal-header warning-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Drug Interaction Warning</h3>
+                <button class="modal-close" onclick="closeInteractionModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="interactionBody">
+                <!-- Interaction warnings will be displayed here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeInteractionModal()">Dismiss</button>
+                <button class="btn btn-warning" onclick="closeInteractionModal()">I Understand</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Container (Hidden until logged in) -->
+    <div class="app-container" id="appContainer" style="display: none;">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediAssist+</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item active" data-page="dashboard">
+                <a href="#dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="medicines">
+                <a href="#medicines">
+                    <i class="fas fa-pills"></i>
+                    <span>Medicines</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="tracker">
+                <a href="#tracker">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Pill Tracker</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="reports">
+                <a href="#reports">
+                    <i class="fas fa-file-medical"></i>
+                    <span>Lab Reports</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="diet">
+                <a href="#diet">
+                    <i class="fas fa-utensils"></i>
+                    <span>Diet Planner</span>
+                </a>
+            </li>
+            <li class="nav-item" data-page="profile">
+                <a href="#profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <h1 id="pageTitle">Dashboard</h1>
+                <p class="date-display" id="currentDate"></p>
+            </div>
+            <div class="header-center">
+                <div class="live-clock" id="liveClock">
+                    <i class="fas fa-clock"></i>
+                    <span id="clockTime">00:00:00</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <div class="notification-bell" onclick="showNotificationPanel()">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge" id="notificationBadge">0</span>
+                </div>
+                <div class="user-info">
+                    <span id="userName">User</span>
+                    <img src="https://ui-avatars.com/api/?name=User&background=4f46e5&color=fff" alt="User" class="user-avatar">
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content Container -->
+        <div class="page-container">
+            <!-- Dashboard Page -->
+            <section class="page active" id="page-dashboard">
+                <div class="dashboard-grid">
+                    <!-- Today's Pills Summary -->
+                    <div class="card summary-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-pills"></i> Today's Pills</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="summary-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value" id="totalPills">0</span>
+                                    <span class="stat-label">Total</span>
+                                </div>
+                                <div class="stat-item taken">
+                                    <span class="stat-value" id="takenPills">0</span>
+                                    <span class="stat-label">Taken</span>
+                                </div>
+                                <div class="stat-item pending">
+                                    <span class="stat-value" id="pendingPills">0</span>
+                                    <span class="stat-label">Pending</span>
+                                </div>
+                                <div class="stat-item missed">
+                                    <span class="stat-value" id="missedPills">0</span>
+                                    <span class="stat-label">Missed</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="pillProgress"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adherence Stats -->
+                    <div class="card stats-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Adherence</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="adherence-circle">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="circle" id="adherenceCircle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <text x="18" y="20.35" class="percentage" id="adherencePercent">0%</text>
+                                </svg>
+                            </div>
+                            <div class="streak-info">
+                                <i class="fas fa-fire"></i>
+                                <span id="currentStreak">0</span> day streak
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Reminders -->
+                    <div class="card reminders-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-clock"></i> Upcoming</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="reminder-list" id="upcomingReminders">
+                                <li class="no-data">No upcoming reminders</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="card actions-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-actions">
+                                <button class="action-btn" onclick="showPage('medicines'); showAddMedicineModal();">
+                                    <i class="fas fa-plus"></i>
+                                    Add Medicine
+                                </button>
+                                <button class="action-btn" onclick="showPage('reports'); showUploadModal();">
+                                    <i class="fas fa-upload"></i>
+                                    Upload Report
+                                </button>
+                                <button class="action-btn" onclick="showPage('diet');">
+                                    <i class="fas fa-utensils"></i>
+                                    View Diet Plan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Reports -->
+                    <div class="card reports-preview-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-file-medical-alt"></i> Recent Reports</h3>
+                            <a href="#reports" onclick="showPage('reports')" class="view-all">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <ul class="reports-list" id="recentReports">
+                                <li class="no-data">No reports uploaded yet</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Health Alerts -->
+                    <div class="card alerts-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Alerts</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="alerts-list" id="healthAlerts">
+                                <li class="no-data">No active alerts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Weekly Adherence Chart -->
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-bar"></i> Weekly Adherence</h3>
+                            <button class="btn btn-sm btn-outline" onclick="exportToPDF()">
+                                <i class="fas fa-download"></i> Export PDF
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="weekly-chart" id="weeklyChart">
+                                <!-- Chart bars will be generated here -->
+                            </div>
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="dot taken"></span> Taken</span>
+                                <span class="legend-item"><span class="dot missed"></span> Missed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medicines Page -->
+            <section class="page" id="page-medicines">
+                <div class="page-header">
+                    <h2>My Medicines</h2>
+                    <button class="btn btn-primary" onclick="showAddMedicineModal()">
+                        <i class="fas fa-plus"></i> Add Medicine
+                    </button>
+                </div>
+                
+                <div class="medicines-grid" id="medicinesGrid">
+                    <!-- Medicine cards will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Pill Tracker Page -->
+            <section class="page" id="page-tracker">
+                <div class="page-header">
+                    <h2>Pill Tracker</h2>
+                    <div class="date-nav">
+                        <button class="btn btn-icon" id="prevDay"><i class="fas fa-chevron-left"></i></button>
+                        <span class="current-date" id="trackerDate"></span>
+                        <button class="btn btn-icon" id="nextDay"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="tracker-grid">
+                    <div class="tracker-timeline" id="trackerTimeline">
+                        <!-- Pills grouped by time will be loaded here -->
+                    </div>
+
+                    <div class="tracker-sidebar">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Today's Progress</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="day-progress">
+                                    <div class="progress-ring">
+                                        <svg viewBox="0 0 36 36" class="circular-chart small">
+                                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                            <path class="circle" id="dayProgressCircle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                        </svg>
+                                        <span class="progress-text" id="dayProgressText">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Monthly Calendar</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="mini-calendar" id="miniCalendar">
+                                    <!-- Calendar will be generated here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lab Reports Page -->
+            <section class="page" id="page-reports">
+                <div class="page-header">
+                    <h2>Lab Reports</h2>
+                    <button class="btn btn-primary" onclick="showUploadModal()">
+                        <i class="fas fa-upload"></i> Upload Report
+                    </button>
+                </div>
+
+                <div class="reports-filters">
+                    <select id="reportTypeFilter" class="form-select">
+                        <option value="">All Types</option>
+                        <option value="cbc">CBC</option>
+                        <option value="kidney">Kidney Function</option>
+                        <option value="lipid">Lipid Profile</option>
+                        <option value="liver">Liver Function</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="thyroid">Thyroid</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="reports-grid" id="reportsGrid">
+                    <!-- Report cards will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Diet Planner Page -->
+            <section class="page" id="page-diet">
+                <div class="page-header">
+                    <h2>Diet & Nutrition</h2>
+                    <button class="btn btn-primary" onclick="showCreateDietPlanModal()">
+                        <i class="fas fa-plus"></i> Create Plan
+                    </button>
+                </div>
+
+                <div class="diet-grid">
+                    <!-- Current Plan Summary -->
+                    <div class="card diet-summary-card">
+                        <div class="card-header">
+                            <h3>Active Plan</h3>
+                            <span class="plan-name" id="activePlanName">No active plan</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="nutrition-targets" id="nutritionTargets">
+                                <div class="target-item">
+                                    <span class="target-label">Calories</span>
+                                    <span class="target-value" id="targetCalories">-</span>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-label">Protein</span>
+                                    <span class="target-value" id="targetProtein">-</span>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-label">Carbs</span>
+                                    <span class="target-value" id="targetCarbs">-</span>
+                                </div>
+                                <div class="target-item">
+                                    <span class="target-label">Fat</span>
+                                    <span class="target-value" id="targetFat">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meal Schedule -->
+                    <div class="card meals-card">
+                        <div class="card-header">
+                            <h3>Today's Meals</h3>
+                            <div class="day-selector">
+                                <button class="btn btn-sm" data-day="0">Sun</button>
+                                <button class="btn btn-sm" data-day="1">Mon</button>
+                                <button class="btn btn-sm" data-day="2">Tue</button>
+                                <button class="btn btn-sm" data-day="3">Wed</button>
+                                <button class="btn btn-sm" data-day="4">Thu</button>
+                                <button class="btn btn-sm" data-day="5">Fri</button>
+                                <button class="btn btn-sm" data-day="6">Sat</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="meals-timeline" id="mealsTimeline">
+                                <!-- Meals will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Restricted Foods -->
+                    <div class="card restricted-card">
+                        <div class="card-header">
+                            <h3>Restricted Foods</h3>
+                            <button class="btn btn-sm btn-outline" onclick="showAddRestrictedFoodModal()">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <ul class="restricted-list" id="restrictedFoodsList">
+                                <li class="no-data">No restricted foods</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Food Search -->
+                    <div class="card food-search-card">
+                        <div class="card-header">
+                            <h3>Food Database</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="search-box">
+                                <input type="text" id="foodSearchInput" placeholder="Search foods..." class="form-input">
+                                <button class="btn btn-icon" onclick="searchFoods()">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="food-results" id="foodSearchResults">
+                                <!-- Search results will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Page -->
+            <section class="page" id="page-profile">
+                <div class="page-header">
+                    <h2>My Profile</h2>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="card profile-card">
+                        <div class="card-body">
+                            <div class="profile-header">
+                                <img src="https://ui-avatars.com/api/?name=User&background=4f46e5&color=fff&size=128" alt="Profile" class="profile-avatar" id="profileAvatar">
+                                <h3 id="profileName">User Name</h3>
+                                <p id="profileEmail">user@email.com</p>
+                            </div>
+
+                            <form id="profileForm" class="profile-form">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" id="inputFullName" class="form-input" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input type="tel" id="inputPhone" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="date" id="inputDob" class="form-input">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select id="inputGender" class="form-select">
+                                            <option value="">Select</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Height (cm)</label>
+                                        <input type="number" id="inputHeight" class="form-input" step="0.1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Weight (kg)</label>
+                                        <input type="number" id="inputWeight" class="form-input" step="0.1">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card conditions-card">
+                        <div class="card-header">
+                            <h3>Health Conditions</h3>
+                            <button class="btn btn-sm btn-outline" onclick="showAddConditionModal()">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <ul class="conditions-list" id="userConditionsList">
+                                <li class="no-data">No health conditions added</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Add Medicine Modal -->
+    <div class="modal" id="medicineModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="medicineModalTitle">Add Medicine</h3>
+                <button class="modal-close" onclick="closeMedicineModal()">&times;</button>
+            </div>
+            <form id="medicineForm">
+                <input type="hidden" id="medicineId">
+                <div class="form-group">
+                    <label>Medicine Name *</label>
+                    <input type="text" id="medicineName" class="form-input" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Dosage</label>
+                        <input type="text" id="medicineDosage" class="form-input" placeholder="e.g., 500mg">
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="medicineDoseType" class="form-select">
+                            <option value="tablet">Tablet</option>
+                            <option value="capsule">Capsule</option>
+                            <option value="syrup">Syrup</option>
+                            <option value="injection">Injection</option>
+                            <option value="drops">Drops</option>
+                            <option value="cream">Cream</option>
+                            <option value="inhaler">Inhaler</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Start Date *</label>
+                        <input type="date" id="medicineStartDate" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" id="medicineEndDate" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Schedules</label>
+                    <div id="schedulesList">
+                        <div class="schedule-item">
+                            <input type="time" class="form-input schedule-time" value="08:00">
+                            <select class="form-select schedule-meal">
+                                <option value="anytime">Anytime</option>
+                                <option value="before_meal">Before Meal</option>
+                                <option value="after_meal">After Meal</option>
+                                <option value="with_meal">With Meal</option>
+                                <option value="empty_stomach">Empty Stomach</option>
+                            </select>
+                            <button type="button" class="btn btn-icon btn-danger remove-schedule">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline" onclick="addScheduleRow()">
+                        <i class="fas fa-plus"></i> Add Time
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label>Instructions</label>
+                    <textarea id="medicineInstructions" class="form-input" rows="2"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeMedicineModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Medicine</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Upload Report Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Upload Lab Report</h3>
+                <button class="modal-close" onclick="closeUploadModal()">&times;</button>
+            </div>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Report Type *</label>
+                    <select id="uploadReportType" class="form-select" required>
+                        <option value="">Select Type</option>
+                        <option value="cbc">CBC (Complete Blood Count)</option>
+                        <option value="kidney">Kidney Function Test</option>
+                        <option value="lipid">Lipid Profile</option>
+                        <option value="liver">Liver Function Test</option>
+                        <option value="diabetes">Diabetes Panel</option>
+                        <option value="thyroid">Thyroid Profile</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Report Date</label>
+                    <input type="date" id="uploadReportDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Upload File *</label>
+                    <div class="file-upload-area" id="fileUploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop or click to upload</p>
+                        <span>Supports: JPG, PNG, PDF (max 10MB)</span>
+                        <input type="file" id="reportFile" accept="image/*,.pdf" required>
+                    </div>
+                    <div class="file-preview" id="filePreview"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeUploadModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Upload & Analyze
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Report Detail Modal -->
+    <div class="modal" id="reportDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3 id="reportDetailTitle">Report Analysis</h3>
+                <button class="modal-close" onclick="closeReportDetailModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="reportDetailBody">
+                <!-- Report details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Diet Plan Modal -->
+    <div class="modal" id="dietPlanModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create Diet Plan</h3>
+                <button class="modal-close" onclick="closeDietPlanModal()">&times;</button>
+            </div>
+            <form id="dietPlanForm">
+                <div class="form-group">
+                    <label>Plan Name *</label>
+                    <input type="text" id="planName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Health Condition Focus</label>
+                    <select id="planCondition" class="form-select">
+                        <option value="">Select Condition</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="hypertension">Hypertension</option>
+                        <option value="kidney_disease">Kidney Disease</option>
+                        <option value="obesity">Obesity</option>
+                        <option value="heart_disease">Heart Disease</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Target Calories *</label>
+                        <input type="number" id="planCalories" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Protein (g)</label>
+                        <input type="number" id="planProtein" class="form-input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Carbs (g)</label>
+                        <input type="number" id="planCarbs" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Fat (g)</label>
+                        <input type="number" id="planFat" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-outline" onclick="generateMealPlan()">
+                        <i class="fas fa-magic"></i> Auto-Generate Meals
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeDietPlanModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Plan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Condition Modal -->
+    <div class="modal" id="conditionModal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>Add Health Condition</h3>
+                <button class="modal-close" onclick="closeConditionModal()">&times;</button>
+            </div>
+            <form id="conditionForm">
+                <div class="form-group">
+                    <label>Select Condition *</label>
+                    <select id="conditionSelect" class="form-select" required>
+                        <option value="">Select...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Diagnosed Date</label>
+                    <input type="date" id="conditionDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="conditionNotes" class="form-input" rows="2"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeConditionModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Condition</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Restricted Food Modal -->
+    <div class="modal" id="restrictedFoodModal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>Add Restricted Food</h3>
+                <button class="modal-close" onclick="closeRestrictedFoodModal()">&times;</button>
+            </div>
+            <form id="restrictedFoodForm">
+                <div class="form-group">
+                    <label>Food Name *</label>
+                    <input type="text" id="restrictedFoodName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Reason</label>
+                    <input type="text" id="restrictedFoodReason" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Severity</label>
+                    <select id="restrictedFoodSeverity" class="form-select">
+                        <option value="avoid">Avoid Completely</option>
+                        <option value="limit">Limit Intake</option>
+                        <option value="moderate">Moderate</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeRestrictedFoodModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div><!-- End of App Container -->
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Debug - check if functions are available
+        console.log('Scripts loaded');
+        console.log('showLandingAuth available:', typeof showLandingAuth);
+        console.log('window.showLandingAuth available:', typeof window.showLandingAuth);
+    </script>
+</body>
+</html>

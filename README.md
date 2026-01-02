@@ -158,14 +158,6 @@ MediAssist/
 
 ---
 
-## ⚠️ Note
-
-This app requires **PHP + MySQL** backend. It will **NOT** work on GitHub Pages (static hosting only). Use XAMPP locally or deploy to a PHP hosting service like:
-- [InfinityFree](https://infinityfree.net) (Free)
-- [000webhost](https://www.000webhost.com) (Free)
-- [Hostinger](https://hostinger.com) (Paid)
-
----
 
 ## ��� License
 

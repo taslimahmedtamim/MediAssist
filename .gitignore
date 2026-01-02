@@ -1,0 +1,29 @@
+# Environment and config files with credentials
+api/config/database.php
+
+# Uploaded files (user data)
+uploads/
+uploads/reports/
+
+# Python virtual environment
+ocr_service/venv/
+ocr_service/__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+error_log
+
+# Dependencies (if any)
+node_modules/
+vendor/

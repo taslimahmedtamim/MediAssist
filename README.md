@@ -1,4 +1,4 @@
-# ��� MediAssist+
+# MediAssist+
 
 **Smart Healthcare Companion** - A web application for managing medications, tracking health, and facilitating doctor-patient communication.
 
@@ -8,23 +8,23 @@
 
 ---
 
-## ✨ Features
+## Features
 
-### 💊 Medicine Reminders
+### Medicine Reminders
 - Set multiple daily medication schedules with specific times
 - Meal-relation tracking (before meal, after meal, empty stomach)
 - Course duration management with start and end dates
 - Dosage and dose type support (tablet, capsule, syrup, injection, etc.)
 - Browser push notifications for timely reminders
 
-### 📊 Pill Tracker
+### Pill Tracker
 - Daily medication checklist with take/miss buttons
 - Visual adherence charts showing weekly and monthly progress
 - Streak counter to encourage consistent medication taking
 - Missed dose tracking with reason logging
 - Monthly calendar view of adherence history
 
-### 👨‍⚕️ Doctor Dashboard
+### Doctor Dashboard
 - Create and manage patient accounts
 - Search patients by username
 - Assign medications with detailed prescriptions
@@ -32,28 +32,28 @@
 - Real-time compliance monitoring with alerts for low adherence
 - View patient health conditions and history
 
-### 🥗 Diet Planner
+### Diet Planner
 - Personalized meal plans based on health conditions
 - Macro nutrient tracking (calories, protein, carbs, fat)
 - Meal-by-meal guidance (breakfast, lunch, dinner, snacks)
 - Condition-specific food recommendations
 - Restricted foods alerts based on health conditions
 
-### 🏥 Health Hub
+### Health Hub
 - Store and manage health conditions (diabetes, hypertension, etc.)
 - Track vital signs and health metrics
 - Medical report storage and analysis
 - Drug interaction warnings
 - Side effects reporting and tracking
 
-### 🏃 Lifestyle Tracker
+### Lifestyle Tracker
 - Daily water intake logging with goals
 - Physical activity tracking with calorie burn calculation
 - Exercise logging (walking, running, yoga, etc.)
 - Weekly wellness summaries
 - Activity history and trends
 
-### 🚨 Emergency Card
+### Emergency Card
 - Blood group and allergy information
 - Primary and secondary emergency contacts
 - Doctor contact details
@@ -61,14 +61,14 @@
 - Special medical instructions
 - Shareable access code for emergency responders
 
-### 🌙 Dark Mode
+### Dark Mode
 - Full dark/light theme support
 - Easy toggle switch in header
 - Persisted preference across sessions
 
 ---
 
-## ��� Installation
+## Installation
 
 ### Prerequisites
 
@@ -108,7 +108,7 @@
 
 ---
 
-## ��� Project Structure
+## Project Structure
 
 ```
 MediAssist/
@@ -125,7 +125,7 @@ MediAssist/
 
 ---
 
-## ��� User Roles
+## User Roles
 
 | Role | Description |
 |------|-------------|
@@ -134,7 +134,7 @@ MediAssist/
 
 ---
 
-## ��� Contributing
+## Contributing
 
 1. **Fork** the repository
 2. **Clone** your fork
@@ -158,11 +158,6 @@ MediAssist/
 
 ---
 
-
-## ��� License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-<p align="center">Made with ❤️ for better healthcare management</p>

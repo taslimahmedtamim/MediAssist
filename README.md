@@ -1,4 +1,4 @@
-# í¿¥ MediAssist+
+# ï¿½ï¿½ï¿½ MediAssist+
 
 **Smart Healthcare Companion** - A web application for managing medications, tracking health, and facilitating doctor-patient communication.
 
@@ -10,18 +10,65 @@
 
 ## âœ¨ Features
 
-- **Medicine Reminders** - Smart notifications for medication schedules
-- **Pill Tracker** - Track daily medication adherence with visual charts
-- **Doctor Dashboard** - Manage patients, assign medicines & diet plans
-- **Diet Planner** - Personalized diet plans based on health conditions
-- **Health Hub** - Monitor health conditions and vitals
-- **Lifestyle Tracker** - Track water intake and physical activities
-- **Emergency Card** - Store emergency contacts and medical info
-- **Dark Mode** - Full dark/light theme support
+### ğŸ’Š Medicine Reminders
+- Set multiple daily medication schedules with specific times
+- Meal-relation tracking (before meal, after meal, empty stomach)
+- Course duration management with start and end dates
+- Dosage and dose type support (tablet, capsule, syrup, injection, etc.)
+- Browser push notifications for timely reminders
+
+### ğŸ“Š Pill Tracker
+- Daily medication checklist with take/miss buttons
+- Visual adherence charts showing weekly and monthly progress
+- Streak counter to encourage consistent medication taking
+- Missed dose tracking with reason logging
+- Monthly calendar view of adherence history
+
+### ğŸ‘¨â€âš•ï¸ Doctor Dashboard
+- Create and manage patient accounts
+- Search patients by username
+- Assign medications with detailed prescriptions
+- Create personalized diet plans for patients
+- Real-time compliance monitoring with alerts for low adherence
+- View patient health conditions and history
+
+### ğŸ¥— Diet Planner
+- Personalized meal plans based on health conditions
+- Macro nutrient tracking (calories, protein, carbs, fat)
+- Meal-by-meal guidance (breakfast, lunch, dinner, snacks)
+- Condition-specific food recommendations
+- Restricted foods alerts based on health conditions
+
+### ğŸ¥ Health Hub
+- Store and manage health conditions (diabetes, hypertension, etc.)
+- Track vital signs and health metrics
+- Medical report storage and analysis
+- Drug interaction warnings
+- Side effects reporting and tracking
+
+### ğŸƒ Lifestyle Tracker
+- Daily water intake logging with goals
+- Physical activity tracking with calorie burn calculation
+- Exercise logging (walking, running, yoga, etc.)
+- Weekly wellness summaries
+- Activity history and trends
+
+### ğŸš¨ Emergency Card
+- Blood group and allergy information
+- Primary and secondary emergency contacts
+- Doctor contact details
+- Hospital preference
+- Special medical instructions
+- Shareable access code for emergency responders
+
+### ğŸŒ™ Dark Mode
+- Full dark/light theme support
+- Easy toggle switch in header
+- Persisted preference across sessions
 
 ---
 
-## íº€ Installation
+## ï¿½ï¿½ï¿½ Installation
 
 ### Prerequisites
 
@@ -61,7 +108,7 @@
 
 ---
 
-## í³ Project Structure
+## ï¿½ï¿½ï¿½ Project Structure
 
 ```
 MediAssist/
@@ -78,7 +125,7 @@ MediAssist/
 
 ---
 
-## í±¥ User Roles
+## ï¿½ï¿½ï¿½ User Roles
 
 | Role | Description |
 |------|-------------|
@@ -87,7 +134,7 @@ MediAssist/
 
 ---
 
-## í´ Contributing
+## ï¿½ï¿½ï¿½ Contributing
 
 1. **Fork** the repository
 2. **Clone** your fork
@@ -120,7 +167,7 @@ This app requires **PHP + MySQL** backend. It will **NOT** work on GitHub Pages 
 
 ---
 
-## í³„ License
+## ï¿½ï¿½ï¿½ License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
